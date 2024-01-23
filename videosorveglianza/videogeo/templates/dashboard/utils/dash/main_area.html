@@ -1,0 +1,55 @@
+{% block content_main %}
+
+
+    <div class="row">
+        <div class="col-md">
+            <h1>Elenco delle ultime aree inserite nel sistema</h1>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md">
+            <table id="list_area" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                <tr>
+                    <td>Titolo</td>
+                    <td>Descrizione</td>
+                    <td>Proprietario/i</td>
+                </tr>
+                </thead>
+                <tbody>
+                {% for place in places %}
+                    <tr>
+                        <td>{{ place.title }}</td>
+                        <td>{{ place.descrizione }}</td>
+                        <td>{{ place.proprietario }}
+                        </td>
+
+
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+            {% for p in puntos %}
+                {{ p.coordinate }}<br>
+            {% endfor %}
+            <div style="width:500px; height:500px" id="map"></div>
+            <script type='text/javascript'>
+                var map = new L.Map('map', {center: new L.LatLng(8.466667, 44.683333), zoom: 9});
+                //var googleLayer = new L.Osm('ROADMAP');
+                var wmsOptions = {};
+                var wmsLayer = L.tileLayer.wms('http://192.168.3.26/ ?', wmsOptions).addTo(map);
+                map.addLayer(wmsLayer);
+            </script>
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#list_area').DataTable();
+        });
+    </script>
+{% endblock %}

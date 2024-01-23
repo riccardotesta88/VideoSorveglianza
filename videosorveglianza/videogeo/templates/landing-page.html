@@ -1,0 +1,176 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ViISTA</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="{% static 'presentazione/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'presentazione/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700"
+          rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="{% static 'presentazione/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="{% static 'presentazione/css/style.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#navigation">
+
+<!-- Fixed navbar -->
+<div id="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand smothscroll" href="#home"><b>DIVAS</b></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#home" class="smothscroll">Home</a></li>
+                <li><a href="#desc" class="smothscroll">Progetto</a></li>
+                <li><a href="#showcase" class="smothscroll">Uso</a></li>
+                <li><a href="#contact" class="smothscroll">Contatti</a></li>
+                <li><a href="test/" class='button ' target="_blank">Accesso Utenti</a></li>
+                <li><a href="admin/" class='button ' target="_blank">Accesso Admin</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+
+<section id="home" name="home">
+    <div id="headerwrap">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-12">
+                    <h1>Benvenuti in <b>DIVAS</b></h1>
+                    <h3>Data Informative Video Analitics System</h3>
+                    <br>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5>Stupendi risultati</h5>
+                    <p>Ricerche semplici e chiare. Inserisci i termini e scopri i risultati</p>
+                    <img class="hidden-xs hidden-sm hidden-md" src="{% static 'presentazione/img/arrow1.png' %}">
+                </div>
+                <div class="col-lg-8">
+                    <img class="img-responsive" src="{% static 'presentazione/img/app-bg1.jpg' %}" alt="">
+                </div>
+                <div class="col-lg-2">
+                    <br>
+                    <img class="hidden-xs hidden-sm hidden-md" src="{% static 'presentazione/img/arrow2.png' %}">
+                    <h5>Design pulito</h5>
+                    <p>Grafica semplice e intuitiva, per facilitare l'uso solo degli strumenti che ti servono.</p>
+                </div>
+            </div>
+        </div>
+        <!--/ .container -->
+    </div>
+    <!--/ #headerwrap -->
+</section>
+
+
+<section id="desc" name="desc">
+    <!-- INTRO WRAP -->
+    <div id="intro">
+        <div class="container">
+            <div class="row centered">
+                <div class="alert alert-warning" role="alert">
+                    <h1 class="alert-heading">Disclaimer</h1>
+                    <h3>Il presente sistema è un applicativo web offline.
+                        Permette di gestire le informazioni dei punti di videosorveglianza sia pubblici che privati
+                        inseriti in anagrafica. Il presente strumento è di uso esclusivo delle forze di pubblica
+                        sicurezza.<br>
+                    </h3>
+                </div>
+
+                <div class="col-lg-4">
+                    <img src="{% static 'presentazione/img/intro01.png' %}" alt="">
+                    <h3>Supporto</h3>
+                    <p>Supporto diretto per gli agenti, il vostro feedback è importante per noi. Nuove idee e proposte
+                        sono bene accette.</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="{% static 'presentazione/img/intro02.png' %}" alt="">
+                    <h3>Ricerca</h3>
+                    <p>Grafica semplice e intuitiva, sui dati presenti in locale. Aggiornamenti ciclici.</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="{% static 'presentazione/img/intro03.png' %}" alt="">
+                    <h3>Monitoring</h3>
+                    <p>Ricerca le informazioni nel motore dell'applicazione e visualizza sulla mappa le informazioni</p>
+                </div>
+            </div>
+            <br>
+            <hr>
+        </div>
+        <!--/ .container -->
+    </div>
+    <!--/ #introwrap -->
+
+
+    <!--/ #features -->
+</section>
+
+
+<section id="contact" name="contact">
+    <div id="footerwrap">
+        <div class="container">
+            <div class="col-lg-5">
+                <h3>Dove siamo</h3>
+                <p>
+                    Via Mariscotti 66<br/> Acqui Terme,<br/> 15011
+                    <br/> Italia
+                </p>
+            </div>
+
+            <div class="col-lg-7">
+                <h3>Contattaci</h3>
+                Scriveteci una mail senza problemi, i vostri dati sono importanti e per questo preferiamo un contatto
+                diretto per l'assitenza.<br>
+                <b>tecnico@360positive.it</b><br>
+                <b>www.360positive.it</b>
+                <br>
+
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<div id="copyrights">
+    <div class="container">
+        <p>
+            &copy; Copyrights <strong>360Positive</strong>. All Rights Reserved 2019
+        </p>
+
+    </div>
+</div>
+
+<!-- JavaScript Libraries -->
+<script src="{% static 'presentazione/lib/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'presentazione/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'presentazione/lib/php-mail-form/validate.js' %}"></script>
+<script src="{% static 'presentazione/lib/easing/easing.min.js' %}"></script>
+
+<!-- Template Main Javascript File -->
+<script src="{% static 'presentazione/js/main.js' %}"></script>
+
+</body>
+</html>

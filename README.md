@@ -19,12 +19,15 @@ Sistema sviluppato in Pyhton e Django per la gestione di impiati di telecamere s
 **Client:** Html, JQuery, Bootstrap
 
 **Server:** Django, FastApi, Pandas, Python
+**Database:** PostgreSQL, SLQLite
 
 
 ## Run Locally
 
-Clone the project
-
+Copia il progetto
+Associa il collegamento al database PostgreSQL
 
 Necessita della compatibilità e installazione delle librerie GDAL per database spaziali.
+
+https://docs.djangoproject.com/en/5.0/ref/contrib/gis/
 

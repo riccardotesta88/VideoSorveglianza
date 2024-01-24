@@ -21,6 +21,8 @@ Sistema sviluppato in Pyhton e Django per la gestione di impiati di telecamere s
 **Server:** Django, FastApi, Pandas, Python
 **Database:** PostgreSQL, SLQLite
 
+https://www.django-rest-framework.org/#installation
+
 
 ## Run Locally
 

@@ -25,6 +25,14 @@ class Persona(models.Model):
     def __str__(self):
         return self.nome + " " + self.cognome
 
+    @classmethod
+    def get_default_pk(cls):
+        exam, created = cls.objects.get_or_create(
+            nome='default person',
+            cognome='default person',
+        )
+        return exam.pk
+
 
 class Installatori(models.Model):
     class Meta:
@@ -34,11 +42,12 @@ class Installatori(models.Model):
     '''
     Definizione delle informazioni dell'installatore
     '''
-    soggetto = models.ForeignKey(Persona, on_delete=models.DO_NOTHING, help_text='Indicazioni dell\'installatore')
+    soggetto = models.ForeignKey(Persona, on_delete=models.DO_NOTHING, help_text='Indicazioni dell\'installatore',
+                                 blank=True, default=Persona.get_default_pk)
     data_installazione = models.DateField(default=200001)
 
     def __str__(self):
-        return self.installatore.name + " " + self.installatore.cognome
+        return self.soggetto.nome + " " + self.soggetto.cognome
 
 
 class Manutenzione(models.Model):
@@ -50,18 +59,19 @@ class Manutenzione(models.Model):
        Definizione delle informazioni del manutentore
        '''
     manutenzione_ditta = models.CharField(max_length=200, default="", help_text='Estremi ditta')
-    manutenzione_persona = models.ManyToManyField(Persona, help_text='Indicazioni del manutentore')
+    manutenzione_persona = models.ForeignKey(Persona, help_text='Indicazioni del manutentore',
+                                             on_delete=models.DO_NOTHING, default=Persona.get_default_pk)
     manutenzione_utltimo_intervento = models.DateField(auto_now=False)
 
     def __str__(self):
-        return self.manutenbzione_persona.nome + " " + self.manutenbzione_persona.ncognome
+        return self.manutenzione_persona.nome + " " + self.manutenzione_persona.cognome
 
 
 class Contatti(models.Model):
     '''
     Definizione dei contatti per raggiungere il soggetto
     '''
-    nominativo = models.ManyToManyField(Persona)
+    soggetto = models.ForeignKey(Persona, on_delete=models.DO_NOTHING, default=Persona.get_default_pk)
     telefono = PhoneField(blank=False, help_text='Recapito telefonico fisso')
     mobile = PhoneField(blank=True, help_text='Recapito telefonico mobile', )
     mail = models.EmailField(blank=True)
@@ -71,7 +81,7 @@ class Contatti(models.Model):
     is_tecnical = models.BooleanField(default=False, help_text='Selezionare se il contatto è un contatto TECNICO')
 
     def __str__(self):
-        return str(self.telefono) + " " + str(self.mobile) + " " + self.mail
+        return f'{str(self.soggeto.__str__)} |' + str(self.telefono) + " " + str(self.mobile) + " " + self.mail
 
 
 class Reperibilita(models.Model):

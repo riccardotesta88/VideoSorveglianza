@@ -3,6 +3,7 @@ from django.contrib.gis.db.models import PointField
 from django.contrib.gis.geos import Point
 
 from .telecamere import *
+from .anagrafiche import *
 
 DEFAULTPOINT = Point(8.466667, 44.683333, srid=4326)
 

@@ -1,5 +1,4 @@
 {% load static %}
-{% load staticfiles %}
 
 {% load crispy_forms_tags %}
 
@@ -167,7 +166,8 @@
                 </div>
 
                 <!-- {# include  'dashboard/utils/dash/main.html' %} -->
-                {% include  'dashboard/utils/dash/main_area.html' %}
+                {#                {% include  'dashboard/utils/dash/main_area.html' %}#}
+                {% include  'viste/elenco_telecamere.html' %}
             </div>
             <!-- /.container-fluid -->
 

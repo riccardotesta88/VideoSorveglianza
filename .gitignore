@@ -1,2 +1,3 @@
 /videosorveglianza/videogeo/scripts/
 *.sqlite3
+/tileMapVector/

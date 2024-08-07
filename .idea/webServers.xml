@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="32b658b7-8219-4e7a-9ae5-477cd0ef5866" name="Server Local Ubuntu Develop" url="http://192.168.3.26">
+        <fileTransfer host="192.168.3.26" port="22" rootFolder="/home/master" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="9e785a03-4978-401f-b107-67e8a690708a" name="Remote Connection" url="http://93.62.191.250:3000/">
+        <fileTransfer host="93.62.191.250" port="3001" rootFolder="/home/master" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="3001" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

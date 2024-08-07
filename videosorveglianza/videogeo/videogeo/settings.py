@@ -56,12 +56,14 @@ INSTALLED_APPS = [
     # 'mapwidgets',
     # 'raster',
     # 'wms',
+    'rest_framework',
     'phone_field',
     'simple_history',
     'leaflet',
     'multiselectfield',
     'crispy_forms',
     'principale',
+    'osm_field',
 
 ]
 
@@ -228,3 +230,11 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

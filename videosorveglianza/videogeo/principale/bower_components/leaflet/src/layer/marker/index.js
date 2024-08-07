@@ -1,0 +1,10 @@
+import {Icon} from './Icon';
+import {IconDefault} from './Icon.Default';
+
+export {icon} from './Icon';
+
+Icon.Default = IconDefault;
+export {Icon};
+
+export {DivIcon, divIcon} from './DivIcon';
+export {Marker, marker} from './Marker';
